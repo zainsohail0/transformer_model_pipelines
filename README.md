@@ -5,11 +5,11 @@ This repository contains two complementary pipelines for predicting antimicrobia
 1. **BERT Pipeline**: Uses BERT-base-uncased with character-level tokenization
 2. **ESM-2 Pipeline**: Uses ESM-2 protein language model with native protein tokenization
 
-## 🧬 Project Overview
+## Project Overview
 
 Antimicrobial peptides are crucial components of innate immunity with potential therapeutic applications. This project implements deep learning approaches to predict AMP activity from protein sequences, comparing general language models (BERT) with specialized protein language models (ESM-2).
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 transformer_model_pipelines/
@@ -26,7 +26,7 @@ transformer_model_pipelines/
 └── README.md                 # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -83,7 +83,7 @@ cd ESM-2_Pipeline
 python esm2_amp_pipeline.py --data_dir ../data --pos_fasta positive_samples.fasta --neg_fasta negative_samples.fasta
 ```
 
-## 🔬 Methodology
+## Methodology
 
 ### BERT Pipeline
 - **Tokenization**: Character-level with spaces between amino acids
@@ -105,7 +105,7 @@ python esm2_amp_pipeline.py --data_dir ../data --pos_fasta positive_samples.fast
 - **Metrics**: Accuracy, Precision, Recall, F1-score, ROC-AUC
 - **Early Stopping**: Prevents overfitting
 
-## 📊 Expected Results
+## Expected Results
 
 Both pipelines typically achieve:
 - **Accuracy**: 85-95%
@@ -114,7 +114,7 @@ Both pipelines typically achieve:
 
 ESM-2 generally shows slightly better performance due to protein-specific pre-training.
 
-## 💡 Tips for Best Results
+## Tips for Best Results
 
 1. **Data Quality**: Ensure your positive and negative samples are well-curated
 2. **Balance**: Maintain reasonable class balance (recommend 1:1 to 1:3 ratio)
@@ -122,7 +122,7 @@ ESM-2 generally shows slightly better performance due to protein-specific pre-tr
 4. **Hardware**: Use GPU for faster training (10-100x speedup)
 5. **Hyperparameters**: Start with defaults, then tune learning rate and batch size
 
-## 🛠️ Customization
+## Customization
 
 ### Configuration Options
 Both pipelines support extensive configuration via:
@@ -140,7 +140,7 @@ Both pipelines support extensive configuration via:
 - **BERT**: Can use other BERT variants (RoBERTa, DistilBERT)
 - **ESM-2**: Multiple sizes available (150M, 650M, 3B parameters)
 
-## 📈 Output Files
+## Output Files
 
 Each pipeline generates:
 - Model checkpoints (`.pt` files)
@@ -149,7 +149,7 @@ Each pipeline generates:
 - Confusion matrices (CSV)
 - Loss curves (PNG plots)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -157,9 +157,7 @@ Each pipeline generates:
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📝 Citation
-
-If you use these pipelines in your research, please cite the relevant papers:
+## Citation
 
 **BERT:**
 ```bibtex
@@ -183,10 +181,6 @@ If you use these pipelines in your research, please cite the relevant papers:
   year={2023}
 }
 ```
-
-## 📧 Contact
-
-For questions or issues, please open a GitHub issue or contact [your-email].
 
 ## 📄 License
 
